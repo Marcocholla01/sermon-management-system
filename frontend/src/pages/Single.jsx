@@ -2,6 +2,7 @@ import React from "react";
 import edit from "../assets/images/edit.png";
 import Delete from "../assets/images/delete.png";
 import { Link, useParams } from "react-router-dom";
+import Menu from "../components/Menu";
 
 const Single = () => {
   const { id } = useParams();
@@ -79,7 +80,7 @@ const Single = () => {
           sint consequat.
         </p>
       </div>
-      <div className="main">p</div>
+      <Menu />
     </div>
   );
 };
