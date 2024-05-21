@@ -1,3 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap");
+
 // Variables
 
 $lightGreen: #b9e7e7;
@@ -12,6 +17,15 @@ $lightGreen: #b9e7e7;
 .app {
   display: flex;
   justify-content: center;
+  font-family: "Poppins", sans-serif;
+
+  h1,
+  b,
+  strong {
+    // font-family: "JetBrains Mono", monospace;
+    // font-family: "Oswald", sans-serif;
+    font-family: "Poetsen One", sans-serif;
+  }
 
   .container {
     width: 1024px;
@@ -183,7 +197,7 @@ $lightGreen: #b9e7e7;
             justify-content: space-between;
 
             h1 {
-              font-size: 40px;
+              font-size: 35px;
             }
 
             p {
@@ -206,6 +220,68 @@ $lightGreen: #b9e7e7;
             }
           }
         }
+      }
+    }
+
+    // SINGLE
+    .single {
+      display: flex;
+      gap: 50px;
+
+      .content {
+        flex: 5;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        img {
+          width: 100%;
+          height: 300px;
+          object-fit: cover;
+        }
+
+        .user {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          font-size: 14px;
+
+          img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+          }
+
+          span {
+            font-weight: bold;
+          }
+        }
+
+        .edit {
+          display: flex;
+          gap: 5px;
+
+          img {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+          }
+        }
+
+        h1 {
+          font-size: 42px;
+          color: #333;
+        }
+        p {
+          text-align: justify;
+          line-height: 30px;
+          color: #333;
+        }
+      }
+
+      .menu {
+        flex: 2;
       }
     }
   }
