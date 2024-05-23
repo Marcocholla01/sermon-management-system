@@ -4,7 +4,7 @@ import { Link, useLocation } from "react-router-dom";
 import { api } from "../configs/serverUrl";
 
 const Home = () => {
-  const [posts, setPosts] = useState();
+  const [posts, setPosts] = useState([]);
   const [error, setError] = useState(null);
 
   const cartegory = useLocation().search;
