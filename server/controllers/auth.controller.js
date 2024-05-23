@@ -77,17 +77,20 @@ export const login = (req, res) => {
     const { password: _, ...other } = user;
 
     res
-      .cookie("X-Auth-Token", token, {
+      .cookie("X_Auth_Token", token, {
         httpOnly: true,
         path: "/",
+        sameSite: "none",
+        secure: true,
+        maxAge: 1 * 60 * 1000,
       })
       .status(200)
-      .json({ success: true, message: "Login successful.", other });
+      .json(other);
   });
 };
 export const logout = (req, res) => {
   res
-    .clearCookie("X-Auth-Token", {
+    .clearCookie("X_Auth_Token", {
       sameSite: "none",
       secure: true,
     })

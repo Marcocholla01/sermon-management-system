@@ -11,12 +11,16 @@ export const AuthContextProviter = ({ children }) => {
   );
 
   const login = async (inputs) => {
-    const res = await axios.post(`${api}/auth/login`, inputs);
+    const res = await axios.post(`${api}/auth/login`, inputs, {
+      withCredentials: true,
+    });
     setCurrentUser(res.data);
   };
 
   const logout = async (inputs) => {
-    const res = await axios.post(`${api}/auth/logout`);
+    const res = await axios.post(`${api}/auth/logout`, {
+      withCredentials: true,
+    });
     setCurrentUser(null);
   };
 

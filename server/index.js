@@ -8,6 +8,7 @@ import cors from "cors";
 import authRoutes from "./routes/authRoutes.js";
 import userRoutes from "./routes/userRoutes.js";
 import postRoutes from "./routes/postsRoutes.js";
+import { corsOptions } from "./utils/corsOptions.js";
 
 dotenv.config({
   path: "config/.env",
@@ -16,7 +17,7 @@ dotenv.config({
 const app = express();
 const port = process.env.PORT || 2001;
 
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(express.json());
 app.use(cookieParser());
 
