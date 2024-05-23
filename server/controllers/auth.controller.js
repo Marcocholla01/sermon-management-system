@@ -82,7 +82,7 @@ export const login = (req, res) => {
         path: "/",
         sameSite: "none",
         secure: true,
-        maxAge: 1 * 60 * 1000,
+        maxAge: 3 * 60 * 60 * 1000,
       })
       .status(200)
       .json(other);
