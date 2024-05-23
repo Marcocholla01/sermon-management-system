@@ -85,4 +85,15 @@ export const login = (req, res) => {
       .json({ success: true, message: "Login successful.", other });
   });
 };
-export const logout = (req, res) => {};
+export const logout = (req, res) => {
+  res
+    .clearCookie("X-Auth-Token", {
+      sameSite: "none",
+      secure: true,
+    })
+    .status(200)
+    .json({
+      success: true,
+      message: "Logout successful.",
+    });
+};
